@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vigneshwara M | Software Developer</title>
+<meta name="description" content="Portfolio of Vigneshwara M, a Java and Spring Boot developer from Chennai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080d;--fg:#e9eaf3;--mute:#9094a8;--line:#1d2030;--acc:#8b7bff;--acc2:#5ee7df;--card:#0d0f18;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Outfit,Inter,sans-serif;line-height:1.08;letter-spacing:-.025em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc2);outline-offset:3px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,nav{position:relative;z-index:1}
+nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:flex-end;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 5vw 16px;backdrop-filter:blur(12px);background:rgba(7,8,13,.55);z-index:5}
+nav div{display:flex;gap:26px}
+nav a{text-decoration:none;color:var(--mute);font-size:15px;transition:color .2s}
+nav a:hover{color:var(--fg)}
+section{min-height:100vh;padding:120px 5vw;max-width:1200px;margin:auto}
+#hero{display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+#hero h1{font-size:clamp(48px,10vw,140px);font-weight:700;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both}
+#hero .role{font-family:Outfit,Inter,sans-serif;font-weight:500;font-size:clamp(20px,3vw,34px);color:var(--acc2);margin:18px 0 22px;animation:rise 1.1s .15s cubic-bezier(.2,.8,.2,1) both}
+#hero p{max-width:540px;color:var(--mute);animation:rise 1.1s .3s cubic-bezier(.2,.8,.2,1) both}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;animation:rise 1.1s .45s cubic-bezier(.2,.8,.2,1) both}
+.btn{padding:14px 26px;border-radius:99px;border:1px solid var(--line);text-decoration:none;font-weight:500;transition:transform .2s,background .2s,border-color .2s}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#0a0a14}
+.btn:hover{transform:translateY(-3px);border-color:var(--acc2)}
+@keyframes rise{from{opacity:0;transform:translateY(40px) rotateX(-25deg)}to{opacity:1;transform:none}}
+h2{font-size:clamp(34px,6vw,70px);margin-bottom:40px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start}
+.about p{color:var(--mute);margin-bottom:18px;max-width:60ch}
+.facts{border-left:1px solid var(--line);padding-left:30px;display:grid;gap:22px}
+.facts span{display:block;color:var(--mute);font-size:14px}
+.facts strong{font-weight:500;font-size:20px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;perspective:900px}
+.tilt{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:30px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 50px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12);transition:transform .15s ease-out,border-color .25s,box-shadow .25s;transform-style:preserve-3d;will-change:transform;overflow:hidden}
+.tilt::before{content:"";position:absolute;left:30px;right:30px;top:0;height:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));border-radius:0 0 4px 4px}
+.tilt:hover{border-color:rgba(139,123,255,.55);box-shadow:0 22px 60px rgba(139,123,255,.18),inset 0 1px 0 rgba(255,255,255,.18)}
+.tilt h3{font-size:22px;margin-bottom:14px;transform:translateZ(30px)}
+.tilt li{list-style:none;color:var(--mute);padding:3px 0;transform:translateZ(14px)}
+.projects{display:grid;gap:26px;perspective:1200px}
+.proj{padding:38px}
+.proj h3{font-size:clamp(26px,4vw,42px)}
+.proj p{color:var(--mute);max-width:70ch;margin:10px 0}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tags i{font-style:normal;font-size:14px;padding:4px 14px;border-radius:99px;background:rgba(139,123,255,.12);color:#c3baff}
+.proj a{color:var(--acc2);font-weight:500}
+.tl{border-left:1px solid var(--line);padding-left:30px;display:grid;gap:40px}
+.tl h3{font-size:24px}
+.tl small{color:var(--acc2);font-size:15px}
+.tl p{color:var(--mute);max-width:65ch}
+#contact{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#contact h2{font-size:clamp(40px,9vw,120px)}
+#contact .mail{font-family:Outfit,Inter,sans-serif;font-weight:500;font-size:clamp(20px,4vw,40px);text-decoration:none;border-bottom:2px solid var(--acc);padding-bottom:4px}
+footer{text-align:center;color:var(--mute);padding:30px 5vw 50px;font-size:14px;position:relative;z-index:1}
+@media(max-width:760px){.about{grid-template-columns:1fr}.facts{border:0;padding:0}nav div{gap:14px}nav a{font-size:13px}section{padding:100px 6vw 70px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<nav><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section id="hero">
+<h1>Vigneshwara M</h1>
+<div class="role">Software Developer · Java and Spring Boot</div>
+<p>I build web applications with Java and Spring Boot, from REST APIs to full-stack apps with Flutter and AI features. Computer Science graduate of 2026, based in Chennai.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="mailto:vigneshwara4011@gmail.com">Email me</a></div>
+</section>
+
+<section id="about">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I’m a Computer Science fresher with hands-on experience in Java, Spring Boot and web development. I’m comfortable with object-oriented programming, data structures and MySQL integration, and I enjoy building systems that scale.</p>
+<p>I’m looking for a Software Developer role where I can apply core Java and Spring Boot skills and contribute to enterprise applications.</p>
+<p>Positive thinker, quick learner and a good teammate who likes solving problems.</p>
+</div>
+<div class="facts">
+<div><span>Location</span><strong>Chennai, India</strong></div>
+<div><span>Education</span><strong>B.E. Computer Science, 2026</strong></div>
+<div><span>Experience</span><strong>Full Stack Developer Intern, 2025</strong></div>
+<div><span>GitHub</span><strong><a href="https://github.com/Vicky4011" target="_blank" rel="noopener">Vicky4011</a></strong></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div class="tilt"><h3>Languages</h3><ul><li>Java (Core)</li><li>Python</li><li>JavaScript (ES6+)</li><li>Flutter</li><li>HTML5 and CSS3</li></ul></div>
+<div class="tilt"><h3>Java and backend</h3><ul><li>Spring Boot</li><li>OOP</li><li>Collections Framework</li><li>Exception handling</li><li>JDBC</li></ul></div>
+<div class="tilt"><h3>Databases</h3><ul><li>MySQL</li><li>MongoDB</li><li>Supabase</li></ul></div>
+<div class="tilt"><h3>Tools</h3><ul><li>Git and GitHub</li><li>VS Code</li><li>Vercel and Render</li><li>MS Office</li></ul></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<article class="tilt proj">
+<h3>RAG AI PDF Chat</h3>
+<p>A full-stack Retrieval-Augmented Generation app. Users upload a PDF and ask questions in plain language, and get answers based on its content. It extracts and chunks the text, ranks chunks by cosine similarity, and sends the best matches to Gemini AI. The backend runs on Render.</p>
+<div class="tags"><i>Flutter</i><i>Spring Boot</i><i>REST APIs</i><i>Gemini AI</i></div>
+<a href="https://github.com/Vicky4011" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="tilt proj">
+<h3>FLOODLIT Turf Booking</h3>
+<p>A responsive website where customers browse turfs, view photo galleries, check prices and book slots. An admin dashboard manages turf details, photos, cover images and bookings, and loads data live from the same source as the customer site.</p>
+<div class="tags"><i>Supabase</i><i>Vercel</i><i>GitHub</i><i>Auth and storage</i></div>
+<a href="https://github.com/Vicky4011" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+<article class="tilt proj">
+<h3>Hayasaka: Free Music Streaming Library</h3>
+<p>A Spotify-inspired responsive music streaming web app with playlist management and song categorization. I focused on UX and UI design principles, smooth navigation and cross-device compatibility using responsive CSS.</p>
+<div class="tags"><i>HTML</i><i>CSS</i><i>Responsive design</i><i>UX/UI</i></div>
+<a href="https://github.com/Vicky4011" target="_blank" rel="noopener">View on GitHub</a>
+</article>
+</div>
+</section>
+
+<section id="journey">
+<h2>Journey</h2>
+<div class="tl">
+<div><small>2025 · 1 month</small><h3>Full Stack Developer Intern, Hazzino Technologies</h3><p>Worked in an agile team on front-end and back-end modules using HTML, CSS and JavaScript. Practiced Git, client requirement analysis and deployment workflows. Theni.</p></div>
+<div><small>2022 – 2026 · 7.5 GPA</small><h3>B.E. Computer Science and Engineering</h3><p><strong style="color:var(--fg);font-weight:500">INFO Institute of Engineering, Coimbatore.</strong> Completed workshops in MERN stack development and cloud computing.</p></div>
+<div><small>2021 – 2022 · 75%</small><h3>Higher Secondary (12th)</h3><p>Velammal Matric Hr. Sec. School, Theni.</p></div>
+<div><small>2019 – 2020 · 91%</small><h3>SSLC (10th)</h3><p>Velammal Matric Hr. Sec. School, Theni.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Let’s work together</h2>
+<p style="color:var(--mute);margin-bottom:26px">Open to Software Developer roles. Write to me anytime.</p>
+<a class="mail" href="mailto:vigneshwara4011@gmail.com">vigneshwara4011@gmail.com</a>
+<div class="btns" style="justify-content:center"><a class="btn" href="tel:+918838724331">+91 88387 24331</a><a class="btn" href="https://github.com/Vicky4011" target="_blank" rel="noopener">GitHub</a></div>
+</section>
+</main>
+<footer>© 2026 Vigneshwara M</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// card tilt
+document.querySelectorAll('.tilt').forEach(function(c){
+  c.addEventListener('mousemove',function(e){if(reduce)return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='rotateY('+x*14+'deg) rotateX('+(-y*14)+'deg) translateZ(10px)'});
+  c.addEventListener('mouseleave',function(){c.style.transform=''});
+});
+// 3D background
+try{
+  var cv=document.getElementById('bg'),R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2));
+  var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(60,1,.1,200);C.position.z=14;
+  var G=new THREE.Group();S.add(G);
+  var n=1500,pos=new Float32Array(n*3);
+  for(var i=0;i<n;i++){var r=8+Math.random()*30,a=Math.random()*6.283,b=Math.acos(2*Math.random()-1);pos[i*3]=r*Math.sin(b)*Math.cos(a);pos[i*3+1]=r*Math.sin(b)*Math.sin(a);pos[i*3+2]=r*Math.cos(b)}
+  var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  var pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xbfc4ff,size:.08,transparent:true,opacity:.8}));
+  S.add(pts);
+  var mx=0,my=0,sy=0;
+  addEventListener('mousemove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+  addEventListener('scroll',function(){sy=scrollY/Math.max(1,document.body.scrollHeight-innerHeight)},{passive:true});
+  function size(){R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();G.position.x=innerWidth>760?4.5:0}
+  addEventListener('resize',size);size();
+  var t=0;
+  (function loop(){
+    t+=reduce?0:.004;
+    G.position.y+=((-sy*6)-G.position.y)*.05;
+    G.rotation.y+=(mx*1.2-G.rotation.y)*.04;G.rotation.x+=(my*1.0-G.rotation.x)*.04;
+    pts.rotation.y=t*.15+sy*2;
+    C.position.z=14-sy*5;
+    R.render(S,C);requestAnimationFrame(loop);
+  })();
+}catch(e){console.warn('WebGL unavailable',e)}
+})();
+</script>
+</body>
+</html>
